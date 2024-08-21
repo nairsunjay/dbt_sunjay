@@ -1,8 +1,8 @@
-name: 'elastic_dbt_interview'
-version: '1.0.0'
+name: "elastic_dbt_interview"
+version: "1.0.0"
 config-version: 2
 
-profile: 'default'
+profile: "default"
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
@@ -32,10 +32,10 @@ models:
     staging:
       +schema: staging
       +materialized: view
-    dimensions:        # Specific folder-level configuration
-      +schema: 'dim'
+    dimensions: 
+      +schema: "dim"
     facts:
-      +schema: 'fact'
+      +schema: "fact"
 
 vars:
   "dbt_date:time_zone": "Europe/Berlin"

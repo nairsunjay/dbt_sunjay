@@ -3,3 +3,4 @@ logs/*
 dbt_packages/*
 models/.DS_Store
 target/
+logs/dbt.log

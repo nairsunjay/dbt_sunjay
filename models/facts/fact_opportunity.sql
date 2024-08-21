@@ -12,6 +12,7 @@ WITH latest_data AS (
         o.created_date,
         o.last_modified_date,
         a.account_name,
+        a.account_id,
         u.user_name AS owner_username,
         d.date_key AS close_date_key
     FROM {{ ref('dim_opportunity') }} o
