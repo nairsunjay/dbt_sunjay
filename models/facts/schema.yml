@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: fact_opportunity
+    description: "Fact table containing sales opportunities data."
+    columns:
+      - name: opportunity_id
+        description: "Primary key for the opportunity."
+        tests:
+          - unique
+          - not_null
+
+      - name: close_date_key
+        description: "Foreign key linking to the dim_date table."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_id
+        description: "Foreign key linking to the dim_account table."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_id
+
+      - name: owner_username
+        description: "Username of the opportunity owner."
+        tests:
+          - not_null
+version: 2
+
+models:
+  - name: fact_opportunity
+    description: "Fact table containing sales opportunities data."
+    columns:
+      - name: opportunity_id
+        description: "Primary key for the opportunity."
+        tests:
+          - unique
+          - not_null
+
+      - name: close_date_key
+        description: "Foreign key linking to the dim_date table."
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_id
+        description: "Foreign key linking to the dim_account table."
+        tests:
+          - not_null
+          - relationships:
+           
+
+  - name: dim_account
+    description: "Dimension table containing account data."
+    columns:
+      - name: account_id
+        description

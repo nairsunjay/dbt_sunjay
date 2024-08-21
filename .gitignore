@@ -1,0 +1,5 @@
+dbt-env/*
+logs/*
+dbt_packages/*
+models/.DS_Store
+target/

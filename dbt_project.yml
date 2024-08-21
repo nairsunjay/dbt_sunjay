@@ -32,6 +32,10 @@ models:
     staging:
       +schema: staging
       +materialized: view
+    dimensions:        # Specific folder-level configuration
+      +schema: 'dim'
+    facts:
+      +schema: 'fact'
 
 vars:
   "dbt_date:time_zone": "Europe/Berlin"
